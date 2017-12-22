@@ -93,7 +93,7 @@ class Country
     public static function getCodeFromName($name, $fallback = 'US')
     {
         $data = self::initData();
-        if (! $data->hasKey('countries', $name)) {
+        if (! $name || ! $data->hasKey('countries', $name)) {
             return $fallback;
         }
 
