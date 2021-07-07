@@ -104,6 +104,7 @@ class CountryPlugin implements PluginInterface, EventSubscriberInterface
             CURLOPT_FILE    => $fileHandle,
             CURLOPT_TIMEOUT => 600,
             CURLOPT_URL     => $url,
+            CURLOPT_FOLLOWLOCATION => true,
         ];
 
         $curl = curl_init();
